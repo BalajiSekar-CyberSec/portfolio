@@ -314,9 +314,26 @@ img {
 }
 
 .contact-copy p {
-  margin: 0;
+  margin: 0 0 1rem;
   color: var(--muted);
   max-width: 42rem;
+}
+
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.contact-buttons .button {
+  padding: 0.85rem 1.25rem;
+}
+
+@media (max-width: 720px) {
+  .contact-buttons {
+    flex-direction: column;
+  }
 }
 
 .site-footer {
