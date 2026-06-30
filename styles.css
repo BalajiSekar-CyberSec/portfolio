@@ -431,163 +431,212 @@ img {
   }
 }
 /* =====================================================
-   MOBILE & TABLET RESPONSIVE IMPROVEMENTS
-   ADD THIS AT THE VERY BOTTOM OF styles.css
+   MOBILE & TABLET RESPONSIVE
 ===================================================== */
-@media (max-width: 768px) {
 
-  .page-shell {
-    padding: 1rem;
+@media (max-width:768px){
+
+  .page-shell{
+    padding:1rem;
   }
 
-  .site-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .site-header{
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
   }
 
-  .brand {
-    justify-content: center;
+  .brand{
+    justify-content:center;
   }
 
-  .site-header h1 {
-    font-size: 1.8rem;
+  .site-header h1{
+    font-size:1.6rem;
   }
 
-  .hero-section {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-    text-align: center;
+  /* ===========================================
+     HERO SECTION
+     LEFT = TEXT
+     RIGHT = PHOTO
+  =========================================== */
+
+  .hero-section{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:1rem;
+    align-items:start;
+    text-align:left;
+    padding:1rem 0;
   }
 
-  /* TEXT FIRST */
-
-  .hero-copy {
-    order: 0;
+  .hero-copy{
+    order:1;
   }
 
-  /* IMAGE SECOND */
-
-  .hero-image-card {
-    order: 1;
-    max-width: 320px;
-    min-height: auto;
-    margin: 1rem auto 0;
-    padding: 0.5rem;
+  .hero-image-card{
+    order:2;
+    margin:0;
+    padding:0.35rem;
+    min-height:auto;
+    max-width:120px;
+    align-self:flex-start;
+    justify-self:end;
+    border-radius:1rem;
   }
 
-  .hero-image-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 1rem;
+  .hero-image-card img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:0.9rem;
   }
 
-  .hero-copy h2 {
-    font-size: 2rem;
-    line-height: 1.3;
+  .hero-copy .eyebrow{
+    font-size:0.65rem;
+    letter-spacing:0.12rem;
   }
 
-  .hero-text {
-    font-size: 1rem;
-    line-height: 1.8;
+  .hero-copy h2{
+    font-size:1.35rem;
+    line-height:1.3;
+    margin:0.35rem 0 0.75rem;
   }
 
-  .hero-highlights {
-    grid-template-columns: 1fr;
+  .hero-text{
+    font-size:0.9rem;
+    line-height:1.6;
+    margin-bottom:1rem;
   }
 
-  .hero-highlights div {
-    width: 100%;
-    text-align: center;
+  /* ===========================================
+     KEEP HIGHLIGHTS IN 2 COLUMNS
+  =========================================== */
+
+  .hero-highlights{
+    grid-template-columns:repeat(2,1fr);
+    gap:0.5rem;
   }
+
+  .hero-highlights div{
+    padding:0.65rem;
+    font-size:0.82rem;
+    text-align:center;
+  }
+
+  /* ===========================================
+     BUTTONS
+  =========================================== */
+
+  .contact-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:0.6rem;
+    margin-top:1rem;
+  }
+
+  .contact-buttons .button{
+    width:100%;
+    font-size:0.9rem;
+  }
+
+  /* ===========================================
+     OTHER SECTIONS
+  =========================================== */
 
   .content-grid,
   .card-grid,
-  .expertise-grid {
-    grid-template-columns: 1fr !important;
+  .expertise-grid{
+    grid-template-columns:1fr;
   }
 
-  .section-panel {
-    padding: 1.5rem;
+  .section-panel{
+    padding:1.4rem;
   }
 
-  .section-heading {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  .section-heading{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:0.75rem;
   }
 
-  .section-number {
-    font-size: 2rem;
+  .section-number{
+    font-size:1.8rem;
   }
 
-  .contact-panel {
-    align-items: stretch;
+  .contact-panel{
+    grid-template-columns:1fr;
   }
 
-  .contact-buttons {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .contact-buttons .button,
-  .button {
-    width: 100%;
-  }
-
-  .site-footer {
-    text-align: center;
+  .site-footer{
+    text-align:center;
   }
 }
-@media (max-width: 480px) {
 
-  body {
-    font-size: 15px;
+/* ===============================================
+   SMALL PHONES
+=============================================== */
+
+@media (max-width:480px){
+
+  body{
+    font-size:15px;
   }
 
-  .site-header h1 {
-    font-size: 1.5rem;
+  .hero-section{
+    grid-template-columns:1.8fr 0.9fr;
+    gap:0.8rem;
   }
 
-  .hero-copy h2 {
-    font-size: 1.7rem;
+  .hero-copy h2{
+    font-size:1.15rem;
+    line-height:1.3;
   }
 
-  .hero-text {
-    font-size: 0.95rem;
+  .hero-copy .eyebrow{
+    font-size:0.6rem;
   }
 
-  .hero-image-card {
-    max-width: 280px;
+  .hero-text{
+    font-size:0.82rem;
+    line-height:1.5;
   }
 
-  .hero-image-card img {
-    height: 180px;
+  .hero-image-card{
+    max-width:95px;
+    padding:0.3rem;
   }
 
-  .section-panel {
-    padding: 1.25rem;
-    border-radius: 1.25rem;
+  .hero-image-card img{
+    height:120px;
+    border-radius:0.8rem;
+  }
+
+  .hero-highlights{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .hero-highlights div{
+    font-size:0.72rem;
+    padding:0.55rem;
+  }
+
+  .button{
+    padding:0.8rem;
+    font-size:0.85rem;
+  }
+
+  .section-panel{
+    padding:1.2rem;
+    border-radius:1.2rem;
   }
 
   .expertise-card,
-  .highlight-card {
-    padding: 1.2rem;
+  .highlight-card{
+    padding:1rem;
   }
 
-  .button {
-    padding: 0.9rem 1rem;
-    font-size: 0.95rem;
-  }
-
-  .hero-image-caption {
-    font-size: 0.9rem;
-  }
-
-  .site-footer {
-    font-size: 0.9rem;
+  .site-footer{
+    font-size:0.85rem;
   }
 }
