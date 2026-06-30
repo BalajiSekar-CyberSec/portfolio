@@ -99,19 +99,7 @@ img {
 .theme-toggle:hover {
   transform: translateY(-1px);
 }
-
-.hero-section {
-  display: grid;
-  grid-template-columns: 1.8fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  padding: 2.5rem 0;
 }
-
-.hero-copy h2 {
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
-  margin: 0.5rem 0 1.1rem;
-  line-height: 1.05;
 }
 
 .hero-text {
@@ -347,14 +335,6 @@ img {
   margin: 0 auto;
 }
 
-.hero-image-card {
-  min-height: 24rem;
-}
-
-.hero-image-card img {
-  min-height: 100%;
-}
-
 .section-panel {
   transition: transform 0.2s ease;
 }
@@ -429,6 +409,121 @@ img {
   .theme-toggle {
     width: 100%;
   }
+}
+/* =====================================================
+   DESKTOP HERO FIX (for new HTML structure)
+===================================================== */
+
+@media (min-width:769px){
+
+  .page-shell{
+      max-width:1400px;
+      margin:0 auto;
+      padding:2rem 3rem;
+  }
+
+  .hero-section{
+      display:flex;
+      flex-direction:column;
+      gap:2rem;
+      padding:3rem 0;
+  }
+
+  /* First Row : Title + Photo */
+
+  .hero-top{
+      display:grid;
+      grid-template-columns:1.6fr 0.8fr;
+      align-items:center;
+      gap:4rem;
+  }
+
+  .hero-title{
+      width:100%;
+  }
+
+  .hero-title h2{
+      font-size:3.2rem;
+      line-height:1.15;
+      margin:.5rem 0 1.2rem;
+      max-width:760px;
+  }
+
+  .hero-title .eyebrow{
+      font-size:.85rem;
+      letter-spacing:.18rem;
+  }
+
+  /* Photo */
+
+  .hero-top .hero-image-card{
+
+      width:100%;
+      max-width:380px;
+      margin-left:auto;
+
+      padding:1rem;
+      min-height:auto;
+
+  }
+
+  .hero-top .hero-image-card img{
+
+      width:100%;
+      height:480px;
+      object-fit:cover;
+      object-position:center top;
+      border-radius:1.5rem;
+
+  }
+
+  /* Second Row */
+
+  .hero-content{
+
+      width:100%;
+      display:block;
+
+  }
+
+  .hero-text{
+
+      max-width:920px;
+      font-size:1.12rem;
+      line-height:1.9;
+
+  }
+
+  .hero-highlights{
+
+      max-width:760px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:1rem;
+
+  }
+
+  .hero-highlights div{
+
+      text-align:center;
+      padding:1rem;
+
+  }
+
+  .contact-buttons{
+
+      display:flex;
+      gap:1rem;
+      margin-top:2rem;
+
+  }
+
+  .contact-buttons .button{
+
+      width:auto;
+
+  }
+
 }
 /* =====================================================
    MOBILE & TABLET RESPONSIVE
